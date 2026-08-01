@@ -24,13 +24,13 @@ const observer = new IntersectionObserver(
   { threshold: 0.08 }
 );
 
-document.querySelectorAll(".job, .card, .now-item, .contact-actions, .stop").forEach((el) => {
+document.querySelectorAll(".job, .card, .now-item, .contact-actions").forEach((el) => {
   el.classList.add("reveal");
   observer.observe(el);
 });
 
 // Stagger items that sit side by side, so they arrive one after another.
-document.querySelectorAll(".now-strip, .community-grid, .journey-track").forEach((group) => {
+document.querySelectorAll(".now-strip, .community-grid").forEach((group) => {
   group.querySelectorAll(".reveal").forEach((el, i) => {
     el.style.transitionDelay = i * 100 + "ms";
   });
@@ -50,47 +50,6 @@ const drawObserver = new IntersectionObserver(
 );
 
 document.querySelectorAll(".hl, .squiggle").forEach((el) => drawObserver.observe(el));
-
-// ----- Career journey -----
-const stops = Array.from(document.querySelectorAll(".stop"));
-const journeyCaption = document.querySelector(".journey-caption");
-let journeyTimer = null;
-let journeyIndex = -1;
-
-function activateStop(i) {
-  journeyIndex = i;
-  stops.forEach((s, j) => s.classList.toggle("active", i === j));
-  journeyCaption.classList.add("fading");
-  setTimeout(() => {
-    journeyCaption.textContent = stops[i].dataset.caption;
-    journeyCaption.classList.remove("fading");
-  }, 220);
-}
-
-stops.forEach((stop, i) => {
-  stop.addEventListener("click", () => {
-    if (journeyTimer) { clearInterval(journeyTimer); journeyTimer = null; }
-    activateStop(i);
-  });
-});
-
-// Gently walk through the stops on its own until the visitor takes over.
-if (stops.length && !reducedMotion) {
-  const journeySection = document.querySelector(".journey");
-  const journeyObserver = new IntersectionObserver(
-    (entries) => {
-      if (entries[0].isIntersecting && !journeyTimer && journeyIndex === -1) {
-        activateStop(0);
-        journeyTimer = setInterval(() => {
-          activateStop((journeyIndex + 1) % stops.length);
-        }, 3800);
-        journeyObserver.disconnect();
-      }
-    },
-    { threshold: 0.5 }
-  );
-  journeyObserver.observe(journeySection);
-}
 
 // ----- Gelato easter egg -----
 let scoops = 0;
