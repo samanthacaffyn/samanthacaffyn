@@ -74,7 +74,7 @@ document.querySelectorAll(".egg").forEach((el) => {
     }
     scoopCounter.textContent =
       scoops >= 10
-        ? "🍨 × " + scoops + " — ok, that's a sundae"
+        ? "🍨 × " + scoops + ", ok that's a sundae"
         : "🍨 × " + scoops + " scoop" + (scoops > 1 ? "s" : "");
   });
 });
