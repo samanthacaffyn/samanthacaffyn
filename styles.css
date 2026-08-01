@@ -199,16 +199,6 @@ html.js .hl.drawn { background-size: 100% 100%; }
 
 .photo-frame img[data-missing] + .photo-fallback { display: flex; }
 
-.photo-caption {
-  margin-top: 18px;
-  font-size: 14.5px;
-  font-style: italic;
-  color: var(--pink-deep);
-  max-width: 260px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* ---------- now strip ---------- */
 .now-strip {
   display: grid;
