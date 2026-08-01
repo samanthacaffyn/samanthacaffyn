@@ -110,13 +110,6 @@ h1 {
   max-width: 34em;
 }
 
-.lede-sub {
-  font-size: 17px;
-  color: var(--blue);
-  margin-bottom: 30px;
-  max-width: 36em;
-}
-
 .hl {
   padding: 0 4px;
   border-radius: 4px;
@@ -413,7 +406,6 @@ html.js .squiggle.drawn::after { transform: scaleX(1); }
 .hero .kicker { animation: rise 0.6s ease 0.05s both; }
 .hero h1 { animation: rise 0.6s ease 0.14s both; }
 .hero .lede { animation: rise 0.6s ease 0.24s both; }
-.hero .lede-sub { animation: rise 0.6s ease 0.34s both; }
 .hero .hero-actions { animation: rise 0.6s ease 0.44s both; }
 .hero-photo { animation: rise 0.7s ease 0.25s both; }
 
@@ -458,7 +450,7 @@ html.js .squiggle.drawn::after { transform: scaleX(1); }
   html { scroll-behavior: auto; }
   html.js .hl { background-size: 100% 100%; transition: none; }
   html.js .squiggle::after { transform: none; transition: none; }
-  .hero .kicker, .hero h1, .hero .lede, .hero .lede-sub, .hero .hero-actions, .hero-photo { animation: none; }
+  .hero .kicker, .hero h1, .hero .lede, .hero .hero-actions, .hero-photo { animation: none; }
   .scoop-float { animation: none; opacity: 0; }
   .photo-frame, .now-item, .card, .job.featured { transition: none; }
   .hero-photo:hover .photo-frame { transform: none; }
