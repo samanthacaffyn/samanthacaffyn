@@ -375,37 +375,6 @@ html.js .squiggle.drawn::after { transform: scaleX(1); }
   box-shadow: 0 10px 22px rgba(4, 52, 44, 0.14);
 }
 
-/* ---------- community ---------- */
-.community-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #0B5B47;
-  border-radius: 16px;
-  padding: 28px 26px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
-}
-
-.card-emoji { font-size: 30px; margin-bottom: 12px; }
-
-.card h3 {
-  font-family: var(--font-display);
-  font-size: 20px;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.card p { font-size: 15.5px; color: #C9EDDF; }
-
 /* ---------- off the clock ---------- */
 .hobby-grid {
   display: grid;
@@ -414,8 +383,7 @@ html.js .squiggle.drawn::after { transform: scaleX(1); }
 }
 
 .hobby-card {
-  background: #fff;
-  border: 1px solid var(--line);
+  background: #0B5B47;
   border-radius: 16px;
   padding: 28px 26px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -423,27 +391,29 @@ html.js .squiggle.drawn::after { transform: scaleX(1); }
 
 .hobby-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 26px rgba(4, 52, 44, 0.1);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
 }
+
+.card-emoji { font-size: 30px; margin-bottom: 12px; }
 
 .hobby-card h3 {
   font-family: var(--font-display);
   font-size: 20px;
   font-weight: 600;
-  color: var(--ink);
+  color: #fff;
   margin-bottom: 10px;
 }
 
-.hobby-card p { font-size: 15.5px; color: var(--ink); }
+.hobby-card p { font-size: 15.5px; color: #C9EDDF; }
 
 .hobby-card a {
-  color: var(--pink-deep);
+  color: var(--pink-soft);
   font-weight: 700;
   text-decoration: none;
-  border-bottom: 2px solid var(--pink-soft);
+  border-bottom: 2px solid var(--pink);
 }
 
-.hobby-card a:hover { border-bottom-color: var(--pink); }
+.hobby-card a:hover { border-bottom-color: var(--pink-soft); }
 
 /* ---------- contact ---------- */
 .contact { text-align: center; }

@@ -24,13 +24,13 @@ const observer = new IntersectionObserver(
   { threshold: 0.08 }
 );
 
-document.querySelectorAll(".job, .card, .hobby-card, .now-item, .contact-actions").forEach((el) => {
+document.querySelectorAll(".job, .hobby-card, .now-item, .contact-actions").forEach((el) => {
   el.classList.add("reveal");
   observer.observe(el);
 });
 
 // Stagger items that sit side by side, so they arrive one after another.
-document.querySelectorAll(".now-strip, .community-grid, .hobby-grid").forEach((group) => {
+document.querySelectorAll(".now-strip, .hobby-grid").forEach((group) => {
   group.querySelectorAll(".reveal").forEach((el, i) => {
     el.style.transitionDelay = i * 100 + "ms";
   });
