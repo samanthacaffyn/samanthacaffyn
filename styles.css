@@ -354,6 +354,27 @@ html.js .squiggle.drawn::after { transform: scaleX(1); }
 .job ul { padding-left: 20px; margin-top: 4px; }
 .job li { margin-bottom: 6px; }
 
+.textbook-covers {
+  display: flex;
+  gap: 16px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.textbook-covers img {
+  width: 140px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 14px rgba(4, 52, 44, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.textbook-covers img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(4, 52, 44, 0.14);
+}
+
 /* ---------- community ---------- */
 .community-grid {
   display: grid;
