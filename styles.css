@@ -310,7 +310,7 @@ html.js .squiggle.drawn::after { transform: scaleX(1); }
   box-shadow: 0 10px 24px rgba(4, 52, 44, 0.08);
 }
 
-.job.origin h3 { color: var(--pink-deep); }
+.job.origin h3 { color: var(--ink); }
 
 .job-dates {
   font-size: 14px;
