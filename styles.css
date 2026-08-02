@@ -394,8 +394,6 @@ html.js .squiggle.drawn::after { transform: scaleX(1); }
   box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
 }
 
-.card-emoji { font-size: 30px; margin-bottom: 12px; }
-
 .hobby-card h3 {
   font-family: var(--font-display);
   font-size: 20px;
