@@ -85,6 +85,12 @@ body {
   margin: 0 auto;
 }
 
+.hero-text {
+  /* Stops a long nowrap highlight span from forcing this grid column
+     wider than its fr share (default grid item min-width is auto). */
+  min-width: 0;
+}
+
 .kicker {
   font-size: 14px;
   letter-spacing: 0.14em;
